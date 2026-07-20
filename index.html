@@ -8,6 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -28,6 +29,14 @@
       </div>
 
       <hr class="divider">
+
+      <div class="instruction-item">
+        <div class="badge">✌️</div>
+        <div class="desc">
+          <h3>Peace Sign — Eye Fire</h3>
+          <p>Flash a peace sign to ignite both eyes. Close your hand to extinguish.</p>
+        </div>
+      </div>
 
       <div class="instruction-item">
         <div class="badge">🔥</div>
@@ -68,6 +77,9 @@
       <div class="darkness"></div>
       <video id="n" class="fx" src="assets/fire.mp4" muted autoplay loop playsinline></video>
       <video id="s" class="fx" src="assets/thunder.mp4" muted autoplay loop playsinline></video>
+      <!-- Eye fire effects (peace sign) -->
+      <video id="eye-l" class="fx eye-fx" src="assets/fire.mp4" muted autoplay loop playsinline></video>
+      <video id="eye-r" class="fx eye-fx" src="assets/fire.mp4" muted autoplay loop playsinline></video>
     </div>
 
     <span id="camera-hint">Effects render in real-time using MediaPipe Hands</span>

@@ -190,6 +190,9 @@ body {
 #n { width: 900px; }
 #s { width: 1200px; }
 
+/* Eye fire — small, centered on each eye */
+.eye-fx { width: 220px; }
+
 /* Camera hint */
 #camera-hint {
   font-size: 11px;
