@@ -14,32 +14,32 @@
 </head>
 <body>
 
-  <!-- Left: indicator + instructions -->
+  <!-- ── Left panel ── -->
   <div id="panel">
 
-    <div id="indicator-row">
-      <div id="hand-dot"></div>
-      <span id="hand-label">No Hand</span>
+    <div id="top-bar">
+      <div id="logo">Carl <span>Exp</span></div>
     </div>
 
-    <div id="instructions">
-      <div class="title-block">
-        <h1>Hand<br>Effects</h1>
-        <p>Point your hands at the camera<br>and open your palm to trigger effects.</p>
-      </div>
+    <div id="title-block">
+      <h1>Hand<br><em>Effects</em></h1>
+      <p>Point your hands at the camera and open your palm to trigger real-time effects.</p>
+    </div>
 
-      <hr class="divider">
+    <hr class="divider">
+
+    <div id="instructions">
 
       <div class="instruction-item">
-        <div class="badge">✌️</div>
+        <div class="badge badge-peace">✌️</div>
         <div class="desc">
           <h3>Peace Sign — Eye Fire</h3>
-          <p>Flash a peace sign to ignite both eyes. Close your hand to extinguish.</p>
+          <p>Flash a peace sign to ignite both eyes. Close to extinguish.</p>
         </div>
       </div>
 
       <div class="instruction-item">
-        <div class="badge">🔥</div>
+        <div class="badge badge-fire">🔥</div>
         <div class="desc">
           <h3>Left Hand — Fire</h3>
           <p>Open your left palm to cast flames above your hand.</p>
@@ -47,7 +47,7 @@
       </div>
 
       <div class="instruction-item">
-        <div class="badge">⚡</div>
+        <div class="badge badge-thunder">⚡</div>
         <div class="desc">
           <h3>Right Hand — Thunder</h3>
           <p>Open your right palm to unleash lightning.</p>
@@ -55,34 +55,48 @@
       </div>
 
       <div class="instruction-item">
-        <div class="badge">✊</div>
+        <div class="badge badge-fist">✊</div>
         <div class="desc">
           <h3>Close Fist</h3>
           <p>Effect fades out when you close your hand.</p>
         </div>
       </div>
+
     </div>
 
-    <div id="panel-footer">Make sure your hands are well lit — Carl Exp</div>
+    <div id="panel-footer">
+      <span>Make sure your hands are well lit</span>
+      <span>MediaPipe v0.4</span>
+    </div>
 
   </div>
 
-  <!-- Right: camera -->
+  <!-- ── Right panel ── -->
   <div id="camera-panel">
-    <span id="camera-label">Live Camera</span>
+
+    <div id="camera-top">
+      <div id="indicator-row">
+        <div id="hand-dot"></div>
+        <span id="hand-label">No Hand</span>
+      </div>
+      <div id="live-badge">
+        <div id="live-dot"></div>
+        Live
+      </div>
+    </div>
 
     <div id="camera-wrap">
       <video id="v_src" autoplay playsinline></video>
       <canvas id="out"></canvas>
       <div class="darkness"></div>
-      <video id="n" class="fx" src="assets/fire.mp4" muted autoplay loop playsinline></video>
-      <video id="s" class="fx" src="assets/thunder.mp4" muted autoplay loop playsinline></video>
-      <!-- Eye fire effects (peace sign) -->
-      <video id="eye-l" class="fx eye-fx" src="assets/fire.mp4" muted autoplay loop playsinline></video>
-      <video id="eye-r" class="fx eye-fx" src="assets/fire.mp4" muted autoplay loop playsinline></video>
+      <video id="n"     class="fx"      src="assets/fire.mp4"    muted autoplay loop playsinline></video>
+      <video id="s"     class="fx"      src="assets/thunder.mp4" muted autoplay loop playsinline></video>
+      <video id="eye-l" class="fx eye-fx" src="assets/fire.mp4"  muted autoplay loop playsinline></video>
+      <video id="eye-r" class="fx eye-fx" src="assets/fire.mp4"  muted autoplay loop playsinline></video>
     </div>
 
-    <span id="camera-hint">Effects render in real-time using MediaPipe Hands</span>
+    <span id="camera-hint">Effects render in real-time using MediaPipe Hands &amp; Face Mesh</span>
+
   </div>
 
   <script src="main.js"></script>
