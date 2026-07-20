@@ -307,3 +307,78 @@ body {
   letter-spacing: 0.04em;
   text-align: right;
 }
+
+/* ═══════════════════════════════
+   MOBILE — stack vertically
+═══════════════════════════════ */
+@media (max-width: 700px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  /* Camera panel on top */
+  #camera-panel {
+    order: -1;
+    width: 100%;
+    height: auto;
+    padding: 16px 16px 12px;
+    gap: 10px;
+    justify-content: flex-start;
+    background: #060608;
+  }
+
+  #camera-wrap {
+    border-radius: 12px;
+  }
+
+  #camera-hint {
+    text-align: center;
+  }
+
+  /* Instructions panel below */
+  #panel {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 24px 20px 32px;
+    overflow: visible;
+  }
+
+  #panel::before, #panel::after {
+    display: none;
+  }
+
+  #top-bar {
+    margin-bottom: 24px;
+  }
+
+  #title-block h1 {
+    font-size: 30px;
+  }
+
+  #title-block {
+    margin-bottom: 24px;
+  }
+
+  .divider {
+    margin-bottom: 20px;
+  }
+
+  #instructions {
+    gap: 10px;
+    flex: none;
+  }
+
+  .instruction-item {
+    padding: 12px 14px;
+  }
+
+  #panel-footer {
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+}
